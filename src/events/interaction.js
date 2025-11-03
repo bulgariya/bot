@@ -16,6 +16,8 @@ import { alphabetCommand } from "../commands/alphabet.js";
 import { checkCommand, checkMessageCommand } from "../commands/sentence.js";
 import { bgjargonCommand } from "../commands/bgjargon.js";
 import { askCommand, askMessageCommand } from "../commands/ask.js";
+import { levelCommand } from "../commands/level.js";
+import { levelHelpCommand } from "../commands/levelHelp.js";
 
 export const name = Events.InteractionCreate;
 export const once = false;
@@ -84,6 +86,12 @@ export async function execute(interaction) {
       return;
     case "ask":
       await executeCommandSafely(askCommand.execute, interaction);
+      return;
+    case "level":
+      await executeCommandSafely(levelCommand.execute, interaction);
+      return;
+    case "levelhelp":
+      await executeCommandSafely(levelHelpCommand.execute, interaction);
       return;
   }
 

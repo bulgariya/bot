@@ -17,6 +17,8 @@ import { booksCommand } from "./src/commands/books.js";
 import { alphabetCommand } from "./src/commands/alphabet.js";
 import { bgjargonCommand } from "./src/commands/bgjargon.js";
 import { askCommand, askMessageCommand } from "./src/commands/ask.js";
+import { levelCommand } from "./src/commands/level.js";
+import { levelHelpCommand } from "./src/commands/levelHelp.js";
 
 
 
@@ -41,6 +43,8 @@ const commands = [
   bgjargonCommand.data,
   askCommand.data,
   askMessageCommand.data,
+  levelCommand.data,
+  levelHelpCommand.data,
 ];
 
 rest
